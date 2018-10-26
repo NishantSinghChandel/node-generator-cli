@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+
+console.log(chalk.blue('Node Generator'));
+console.log(chalk.yellow('Author: Nishant Singh <realnishantsingh@gmail.com>'));
+
+program
+  .version(require('../package').version)
+  .usage('<command> [options]')
+  .command('wizard', 'Start generator wizard', {isDefault: true})
+  .command('init', 'Create a local settings file (.nodegenerator)')
+  .command('controller', 'Create a controller')
+  .command('router', 'Create a router')
+  .command('model', 'Create a model')
+  .command('reset', 'Reset global settings')
+  .command('settings', 'Set or display settings')
+  .command('show-templates', 'Open default template directory to show or edit default templates')
+  .command('copy-templates', 'Copy default templates to desired location')
+  .parse(process.argv);
