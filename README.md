@@ -106,3 +106,56 @@ $ ng model address -t address-model
 
 The generated file will be
 `*filename.js`
+
+
+
+#### settings
+
+Set or display settings. Without any options it will display the settings. By default it will set the settings locally in a .vuegenerator file.
+You can also set global settings by using the global option ```-g --global```.
+
+```console
+$ ng settings
+```
+
+Options:
+
+* ```-m, --model-destination <destination>```: Set default model destination.
+* ```-c, --controller-destination <destination>```: Set default controller destination.
+* ```-r, --router-destination <destination>```: Set default router destination.
+* ```-t, --template-path <template-path>```: Set template path.
+* ```-l, --log```: Log global or local settings depending on the global flag.
+* ```-g, --global```: Set global settings.
+
+Examples:
+```console
+$ ng settings -l
+$ ng settings -m ./model -c ./contoller -r ./router -t ./template
+$ ng settings -g -c ./controllers
+```
+
+#### reset
+
+Reset global settings to the defaults.
+
+```console
+$ ng reset
+```
+
+#### show-templates
+
+Open the default template directory. The default templates can be edited to fit your needs. 
+
+```console
+$ ng show-templates
+```
+
+#### copy-templates
+
+Copy the default templates to another directory. This is handy when you want to customize the default templates. 
+Don't forget to run ```ng init``` or set the template path with ```ng settings```.
+
+```console
+$ ng copy-templates
+```
+
