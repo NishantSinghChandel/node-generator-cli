@@ -1,6 +1,6 @@
 {
   "name": "node-generator-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A CLI for node to generate file for controllers, router and models",
   "preferGlobal": true,
   "bin": {
